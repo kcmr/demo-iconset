@@ -1,6 +1,9 @@
 {
   "name": "demo-iconset",
   "version": "0.1.1",
+  "authors": [
+    "Kus Cámara"
+  ],
   "description": "Demo helper to showcase a Polymer iconset",
   "keywords": [
     "iconset",
@@ -18,10 +21,14 @@
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
-    "web-component-tester": "Polymer/web-component-tester#^4.0.0",
-    "iron-icons": "PolymerElements/iron-icons#^1.0.0"
+    "iron-icons": "PolymerElements/iron-icons#^1.0.0",
+    "web-component-tester": "v6.0.0"
   },
-  "main": [
-    "demo-iconset.html"
-  ]
+  "main": "demo-iconset.html",
+  "license": "MIT",
+  "homepage": "https://github.com/kcmr/demo-iconset/",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kcmr/demo-iconset.git"
+  }
 }
