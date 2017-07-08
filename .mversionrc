@@ -1,0 +1,4 @@
+{
+  "commitMessage": "chore(bower): update version to v%s",
+  "tagName": "v%s"
+}
