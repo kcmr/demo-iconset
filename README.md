@@ -2,6 +2,8 @@
 
 > A demo helper component to showcase a Polymer iconset.
 
+![Component Screenshot](demo-iconset-screenshot.png)
+
 This component displays the icons of a Polymer iconset with an input to filter the results and an optional text with the total of icons.
 
 Example:
