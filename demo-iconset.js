@@ -6,7 +6,32 @@
 
     is: 'demo-iconset',
 
+    behaviors: [
+      Polymer.AppLocalizeBehavior
+    ],
+
     properties: {
+      /**
+       * Language to be used by the component.
+       */
+      language: {
+        value: 'en'
+      },
+
+      /**
+       * Translation keys.
+       */
+      resources: {
+        value: function() {
+          return {
+            'es': {
+              'icons': 'iconos',
+              'Search icon': 'Buscar icono'
+            }
+          };
+        }
+      },
+
       /**
        * Name of the iconset to be shown.
        */

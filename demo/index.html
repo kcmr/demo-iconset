@@ -9,6 +9,11 @@
         dom: 'shadow',
         useNativeCSSProperties: true
       };
+      var lang = navigator.language || navigator.userLanguage || document.documentElement.lang;
+      if (['en', 'es'].indexOf(lang.substring(0, 2)) === -1) {
+        lang = 'en';
+      }
+      document.documentElement.lang = lang;
     </script>
     <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
     <link rel="import" href="../../iron-icons/maps-icons.html">
@@ -21,5 +26,8 @@
   </head>
   <body>
     <demo-iconset iconset="maps" show-total></demo-iconset>
+    <script>
+      document.querySelector('demo-iconset').language = lang;
+    </script>
   </body>
 </html>

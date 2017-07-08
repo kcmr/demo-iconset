@@ -2,6 +2,7 @@
 <link rel="import" href="../iron-meta/iron-meta.html">
 <link rel="import" href="../iron-icon/iron-icon.html">
 <link rel="import" href="../paper-input/paper-input.html">
+<link rel="import" href="../app-localize-behavior/app-localize-behavior.html">
 <link rel="import" href="demo-iconset-styles.html">
 
 <!--
@@ -42,8 +43,8 @@ The following custom properties and mixins are available for styling:
     <style include="demo-iconset-styles demo-iconset-shared-styles"></style>
     <iron-meta id="meta" type="iconset"></iron-meta>
     <div class="icon-meta">
-      <p class="total" hidden="[[!showTotal]]">[[icons.length]] icons</p>
-      <paper-input class="icon-search" always-float-label label="Search icon" value="{{_search}}">
+      <p class="total" hidden="[[!showTotal]]">[[icons.length]] [[localize('icons')]]</p>
+      <paper-input class="icon-search" always-float-label label="[[localize('Search icon')]]" value="{{_search}}">
         <span prefix>[[iconset]]:</span>
       </paper-input>
     </div>
