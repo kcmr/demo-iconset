@@ -64,10 +64,6 @@
           return true;
         }
 
-        if (!item) {
-          return false;
-        }
-
         return item.split(':')[1].indexOf(value) > -1;
       };
     }
