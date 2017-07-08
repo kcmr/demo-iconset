@@ -12,14 +12,14 @@
   "ignore": [],
   "dependencies": {
     "polymer": "Polymer/polymer#^1.9.0",
-    "iron-meta": "PolymerElements/iron-meta#^2.0.2",
-    "iron-icon": "PolymerElements/iron-icon#^2.0.0",
-    "paper-input": "PolymerElements/paper-input#^2.0.1"
+    "iron-meta": "PolymerElements/iron-meta#^1.0.0",
+    "iron-icon": "PolymerElements/iron-icon#^1.0.0",
+    "paper-input": "PolymerElements/paper-input#^1.0.0"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
     "web-component-tester": "Polymer/web-component-tester#^4.0.0",
-    "iron-icons": "PolymerElements/iron-icons#^2.0.1"
+    "iron-icons": "PolymerElements/iron-icons#^1.0.0"
   },
   "main": [
     "demo-iconset.html"
