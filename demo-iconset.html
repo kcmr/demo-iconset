@@ -1,0 +1,58 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-meta/iron-meta.html">
+<link rel="import" href="../iron-icon/iron-icon.html">
+<link rel="import" href="../paper-input/paper-input.html">
+<link rel="import" href="demo-iconset-styles.html">
+
+<!--
+`<demo-iconset>` displays the icons of a Polymer iconset with an input to filter the results and an optional text with the total of icons.
+
+Example:
+
+```html
+<demo-iconset iconset="maps" icon-size="24" show-total></demo-iconset>
+```
+
+## Styling
+
+The following custom properties and mixins are available for styling:
+
+| Custom property | Description     | Default        |
+|:----------------|:----------------|:---------------|
+| --demo-iconset  | Empty mixin applied to :host     | {} |
+| --demo-iconset-primary-color | Primary text color | #000 |
+| --demo-iconset-secondary-color | Secondary color used for :focus, :hover and selections | rebeccapurple |
+| --demo-iconset-icon-meta | Empty mixin applied to the wrapper of the search input and the total of icons | {} |
+| --demo-iconset-icons | Empty mixin applied to the icon list wrapper | {} |
+| --demo-iconset-item | Empty mixin applied to each icon list item with the label, icon and input | {} |
+| --demo-iconset-item-hover | Empty mixin applied to each icon list item for the :hover state | {} |
+| --demo-iconset-item-at-730 | Empty mixin applied to each icon list item at @media (min-width: 730px) | {} |
+| --demo-iconset-item-at-1600 | Empty mixin applied to each icon list item at @media (min-width: 1600px) | {} |
+| --demo-iconset-item-icon | Empty mixin applied to each icon in the list | {} |
+| --demo-iconset-item-input | Empty mixin applied to each input in the list | {} |
+| --demo-iconset-item-input-selection | Empty mixin applied to each input in the list for text selection | {} |
+| --demo-iconset-item-input-focus | Empty mixin applied to each input in the list for the :focus state | {} |
+
+@demo demo/index.html
+-->
+<dom-module id="demo-iconset">
+  <template>
+    <style include="demo-iconset-styles demo-iconset-shared-styles"></style>
+    <iron-meta id="meta" type="iconset"></iron-meta>
+    <div class="icon-meta">
+      <p class="total" hidden="[[!showTotal]]">[[icons.length]] icons</p>
+      <paper-input class="icon-search" always-float-label label="Search icon" value="{{_search}}">
+        <span prefix>[[iconset]]:</span>
+      </paper-input>
+    </div>
+    <div class="icons">
+      <template is="dom-repeat" items="[[icons]]" id="icons" initial-count="1" filter="[[_filter(_search)]]">
+        <label class="item">
+          <iron-icon icon="[[item]]" class="item-icon" style$="[[_iconStyle]]"></iron-icon>
+          <input type="text" value="[[item]]" on-focus="_select" class="item-input" spellcheck="false">
+        </label>
+      </template>
+    </div>
+  </template>
+  <script src="demo-iconset.js"></script>
+</dom-module>

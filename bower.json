@@ -1,0 +1,27 @@
+{
+  "name": "demo-iconset",
+  "version": "0.0.0",
+  "description": "Demo helper to showcase a Polymer iconset",
+  "keywords": [
+    "iconset",
+    "polymer",
+    "web-component",
+    "icon",
+    "demo"
+  ],
+  "ignore": [],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.9.0",
+    "iron-meta": "PolymerElements/iron-meta#^2.0.2",
+    "iron-icon": "PolymerElements/iron-icon#^2.0.0",
+    "paper-input": "PolymerElements/paper-input#^2.0.1"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "web-component-tester": "Polymer/web-component-tester#^4.0.0",
+    "iron-icons": "PolymerElements/iron-icons#^2.0.1"
+  },
+  "main": [
+    "demo-iconset.html"
+  ]
+}
