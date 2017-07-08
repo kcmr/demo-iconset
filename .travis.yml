@@ -2,7 +2,6 @@ language: node_js
 sudo: required
 before_script:
   - npm install -g polymer-cli
-  - bower i -D web-component-tester
 env:
   global:
     - secure: >-
