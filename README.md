@@ -1,8 +1,12 @@
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg?style=flat-square)](https://www.webcomponents.org/element/kcmr/demo-iconset/)
+
 # &lt;demo-iconset&gt;
 
-> A demo helper component to showcase a Polymer iconset.
+> A demo helper component to showcase a Polymer iconset. 
 
-![Component Screenshot](demo-iconset-screenshot.png)
+**Demo:** [https://kcmr.github.io/demo-iconset/](https://kcmr.github.io/demo-iconset/)
+
+[![Demo](demo-iconset-screenshot.png)](https://kcmr.github.io/demo-iconset/)
 
 This component displays the icons of a Polymer iconset with an input to filter the results and an optional text with the total of icons.
 
