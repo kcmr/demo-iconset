@@ -1,6 +1,5 @@
 # &lt;demo-iconset&gt;
 
-[![Build Status](https://img.shields.io/travis/kcmr/demo-iconset/master.svg?style=flat-square)](https://travis-ci.org/kcmr/demo-iconset)
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg?style=flat-square)](https://www.webcomponents.org/element/kcmr/demo-iconset/)
 
 > A demo helper component to showcase a Polymer iconset. 
