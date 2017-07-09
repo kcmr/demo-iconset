@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+  <script src="../../web-component-tester/browser.js"></script>
+  <link rel="import" href="iconset.html">
+  <link rel="import" href="../demo-iconset.html">
+</head>
+
+<body>
+  <test-fixture id="default">
+    <template>
+      <demo-iconset></demo-iconset>
+    </template>
+  </test-fixture>
+
+  <script>
+    describe('<demo-iconset>', function() {
+      var el;
+
+      beforeEach(function() {
+        el = fixture('default');
+        el.iconset = 'maps';
+      });
+
+      it('the icon list should have the same number of items that the iconset has', function() {
+        expect(el.$.icons.items.length).to.equal(4);
+      });
+
+      it('should display each icon of the iconset', function(done) {
+        flush(function() {
+          var firstIcon = Polymer.dom(el.root).querySelector('iron-icon');
+          expect(firstIcon.icon).to.equal('maps:add-location');
+          done();
+        });
+      });
+
+      it('should set iconSize as width and height for each icon', function(done) {
+        el.iconSize = 12;
+        flush(function() {
+          var firstIcon = Polymer.dom(el.root).querySelector('iron-icon');
+          expect(parseInt(firstIcon.getComputedStyleValue('width'))).to.equal(el.iconSize);
+          expect(parseInt(firstIcon.getComputedStyleValue('height'))).to.equal(el.iconSize);
+          done();
+        });
+      });
+
+      it('should display the name of the icons in the input', function(done) {
+        flush(function() {
+          var firstInput = Polymer.dom(el.root).querySelector('input');
+          expect(firstInput.value).to.equal('maps:add-location');
+          done();
+        });
+      });
+
+      it('should select the input text when it receives focus', function(done) {
+        flush(function() {
+          var firstInput = Polymer.dom(el.root).querySelector('input');
+          sinon.spy(firstInput, 'select');
+          firstInput.dispatchEvent(new Event('focus'));
+          expect(firstInput.select).to.have.been.called.once;
+          done();
+        });
+      });
+
+      it('should filter the list with the expected result when a search is performed', function(done) {
+        var searchInput = el.$$('paper-input');
+        searchInput.value = 'been';
+        flush(function() {
+          expect(Polymer.dom(el.root).querySelectorAll('.item').length).to.equal(1);
+          expect(Polymer.dom(el.root).querySelector('iron-icon').icon).to.equal('maps:beenhere');
+          done();
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
