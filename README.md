@@ -10,11 +10,37 @@
 
 This component displays the icons of a Polymer iconset with an input to filter the results and an optional text with the total of icons.
 
-Example:
+
+## Installation and usage
+
+Install the component using Bower:
+
+```
+bower i -S demo-iconset
+```
+
+Import Web Components polyfill:
 
 ```html
-<demo-iconset iconset="maps" icon-size="24"></demo-iconset>
+<script src="<path-to-components>/webcomponentsjs/webcomponents-lite.js"></script>
 ```
+
+Import the component and the Polymer Iconset to show:
+
+```html
+<link rel="import" href="<path-to-components>/my-icons/my-icons.html">
+<link rel="import" href="<path-to-components>/demo-iconset/demo-iconset.html">
+```
+Use it!
+
+```html
+<demo-iconset iconset="my-icons"></demo-iconset>
+```
+
+## Compatibility
+
+The component is an Hybrid Polymer element **compatible with Polymer 1.x and 2.x** elements.   
+It will be migrated to a class-based element in the future.
 
 ## Properties
 
