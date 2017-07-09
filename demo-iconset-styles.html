@@ -1,5 +1,5 @@
 <dom-module id="demo-iconset-styles"><template><style>
-:host([hidden]) {
+:host([hidden]), [hidden] {
   display: none; }
 
 :host {
@@ -9,8 +9,19 @@
   --demo-iconset-secondary-color: rebeccapurple;
   --paper-input-container-focus-color: var(--demo-iconset-secondary-color); }
 
+:host(.fixed-search) {
+  position: relative;
+  padding-top: 100px; }
+  :host(.fixed-search) .icon-meta {
+    padding-bottom: 0;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: calc(100% - 40px);
+    background-color: #fff; }
+
 .icon-meta {
-  margin: 20px;
+  padding: 20px;
   @apply --demo-iconset-icon-meta; }
 
 .icons {

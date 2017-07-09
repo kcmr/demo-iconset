@@ -54,6 +54,7 @@ It will be migrated to a class-based element in the future.
 
 ## Styling
 
+The class "fixed-search" keeps the search input fixed at the top.   
 The following custom properties and mixins are available for styling:
 
 | Custom property                     | Description                                                                   | Default       |

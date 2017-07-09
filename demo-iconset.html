@@ -13,6 +13,11 @@ Example:
 <demo-iconset iconset="maps" icon-size="24" show-total></demo-iconset>
 ```
 
+Use the class "fixed-search" to keep the search input fixed at the top:
+```html
+<demo-iconset iconset="maps" class="fixed-search"></demo-iconset>
+```
+
 ## Styling
 
 The following custom properties and mixins are available for styling:
@@ -42,9 +47,9 @@ The following custom properties and mixins are available for styling:
     <style include="demo-iconset-styles demo-iconset-shared-styles"></style>
     <iron-meta id="meta" type="iconset"></iron-meta>
     <div class="icon-meta">
-      <p class="total" hidden="[[!showTotal]]">[[icons.length]] icons</p>
       <paper-input class="icon-search" always-float-label label="Search icon" value="{{_search}}">
         <span slot="prefix">[[iconset]]:</span>
+        <span slot="suffix" hidden="[[!showTotal]]">[[icons.length]] icons</span>
       </paper-input>
     </div>
     <div class="icons">
