@@ -10,21 +10,30 @@
 }
 
 :host(.fixed-search) {
-  position: relative;
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 100px);
+  overflow: hidden;
   padding-top: 100px;
+
+  .wrapper {
+    height: 100%;
+    overflow: auto;
+  }
 
   .icon-meta {
     padding-bottom: 0;
-    position: fixed;
+    position: absolute;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 1;
-    width: calc(100% - 40px);
-    background-color: #fff;
+    background-color: var(--demo-iconset-fixed-search-background, #fff);
   }
 }
 
 .icon-meta {
-  padding: 20px;
+  padding: 20px 25px;
   @apply --demo-iconset-icon-meta;
 }
 
