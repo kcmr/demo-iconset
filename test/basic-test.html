@@ -75,6 +75,16 @@
           done();
         });
       });
+
+      it('should display the full list when the search value is empty', function(done) {
+        var searchInput = el.$$('paper-input');
+        searchInput.value = 'been';
+        searchInput.value = '';
+        flush(function() {
+          expect(Polymer.dom(el.root).querySelectorAll('.item').length).to.equal(el.icons.length);
+          done();
+        });
+      });
     });
   </script>
 </body>
