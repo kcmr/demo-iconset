@@ -31,7 +31,7 @@
       },
 
       /**
-       * List of icons.
+       * Returns the list of icons.
        */
       icons: {
         type: Array,
