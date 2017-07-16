@@ -80,10 +80,10 @@
         var searchInput = el.$$('paper-input');
         searchInput.value = 'been';
         searchInput.value = '';
-        flush(function() {
+        Polymer.Base.async(function() {
           expect(Polymer.dom(el.root).querySelectorAll('.item').length).to.equal(el.icons.length);
           done();
-        });
+        }, 100);
       });
     });
   </script>
