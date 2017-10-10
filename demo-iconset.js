@@ -64,7 +64,7 @@
           return true;
         }
 
-        return item.split(':')[1].indexOf(value) > -1;
+        return item.toLowerCase().split(':')[1].indexOf(value.toLowerCase()) > -1;
       };
     }
   });
